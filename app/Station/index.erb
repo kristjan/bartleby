@@ -1,0 +1,17 @@
+<div class="pageTitle">
+  <h1>Stations</h1>
+</div>
+
+<div class="content">
+  <h1><%= @stations.size %> Stations</h1>
+  <ul>
+    <% @stations.each do |station| %>
+      <% puts "Rendering #{station.inspect}" %>
+      <li>
+        <a href="<%= url_for :action => :show, :id => station.object %>">
+          <span class="title"><%= station.name %></span><span class="disclosure_indicator"></span>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

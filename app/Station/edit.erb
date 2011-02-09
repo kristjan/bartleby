@@ -1,0 +1,57 @@
+<div class="pageTitle">
+  <h1>Edit <%= @station.name %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :show, :id => @station.object %>">Cancel</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :delete, :id => @station.object %>">Delete</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @station.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="station[name]" class="fieldLabel">Name</label>
+            <input type="text" name="station[name]" value="<%= @station.name %>" <%= placeholder( "Name" ) %> />
+          </li>
+      
+          <li>
+            <label for="station[abbreviation]" class="fieldLabel">Abbreviation</label>
+            <input type="text" name="station[abbreviation]" value="<%= @station.abbreviation %>" <%= placeholder( "Abbreviation" ) %> />
+          </li>
+      
+          <li>
+            <label for="station[address]" class="fieldLabel">Address</label>
+            <input type="text" name="station[address]" value="<%= @station.address %>" <%= placeholder( "Address" ) %> />
+          </li>
+      
+          <li>
+            <label for="station[city]" class="fieldLabel">City</label>
+            <input type="text" name="station[city]" value="<%= @station.city %>" <%= placeholder( "City" ) %> />
+          </li>
+      
+          <li>
+            <label for="station[county]" class="fieldLabel">County</label>
+            <input type="text" name="station[county]" value="<%= @station.county %>" <%= placeholder( "County" ) %> />
+          </li>
+      
+          <li>
+            <label for="station[state]" class="fieldLabel">State</label>
+            <input type="text" name="station[state]" value="<%= @station.state %>" <%= placeholder( "State" ) %> />
+          </li>
+      
+          <li>
+            <label for="station[zip]" class="fieldLabel">Zip</label>
+            <input type="text" name="station[zip]" value="<%= @station.zip %>" <%= placeholder( "Zip" ) %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Update"/>
+  </form>
+</div>

@@ -1,0 +1,54 @@
+<div id="pageTitle">
+    <h1>New Station</h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :index %>
+</div>
+
+
+<div id="content">
+
+    <form method="POST" action="<%= url_for :action => :create %>">
+	    <input type="hidden" name="id" value="<%= @station.object %>"/>
+        <table>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Name: </td>
+    			  <td class="itemValue"><input type="text" name="station[name]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Abbreviation: </td>
+    			  <td class="itemValue"><input type="text" name="station[abbreviation]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Address: </td>
+    			  <td class="itemValue"><input type="text" name="station[address]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">City: </td>
+    			  <td class="itemValue"><input type="text" name="station[city]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">County: </td>
+    			  <td class="itemValue"><input type="text" name="station[county]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">State: </td>
+    			  <td class="itemValue"><input type="text" name="station[state]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Zip: </td>
+    			  <td class="itemValue"><input type="text" name="station[zip]"/></td>
+    		  </tr>
+    		
+        </table>
+        <input type="submit" class="standardButton" value="Create" />
+    </form>
+</div>

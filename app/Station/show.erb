@@ -1,0 +1,53 @@
+<div class="pageTitle">
+  <h1><%= @station.name %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :index %>">Back</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a href="<%= url_for :action => :edit, :id => @station.object %>">Edit</a>
+  </div>
+</div>
+
+<div class="content">
+  <ul>
+
+        <li>
+          <div class="itemLabel">Name</div>
+          <div class="itemValue"><%= @station.name %></div>
+        </li>
+
+        <li>
+          <div class="itemLabel">Abbreviation</div>
+          <div class="itemValue"><%= @station.abbr %></div>
+        </li>
+
+        <li>
+          <div class="itemLabel">Address</div>
+          <div class="itemValue"><%= @station.address %></div>
+        </li>
+
+        <li>
+          <div class="itemLabel">City</div>
+          <div class="itemValue"><%= @station.city %></div>
+        </li>
+
+        <li>
+          <div class="itemLabel">County</div>
+          <div class="itemValue"><%= @station.county %></div>
+        </li>
+
+        <li>
+          <div class="itemLabel">State</div>
+          <div class="itemValue"><%= @station.state %></div>
+        </li>
+
+        <li>
+          <div class="itemLabel">Zip Code</div>
+          <div class="itemValue"><%= @station.zipcode %></div>
+        </li>
+
+  </ul>
+</div>
